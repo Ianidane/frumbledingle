@@ -11,8 +11,8 @@ class Item extends Model
 
     protected $guarded = ['id'];
 
-    public function location()
+    public function item()
     {
-        return $this->belongsTo(Location::class);
+        return $this->belongsTo(Item::class);
     }
 }
