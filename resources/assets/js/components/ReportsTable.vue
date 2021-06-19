@@ -15,18 +15,17 @@
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <th>Location</th>
-                <th>Parent Category</th>
                 <th>Category</th>
+                <th>Parent Category</th>
                 <th>Count</th>
             </thead>
             <tbody>
-                <!-- <tr v-for="row in Items" :key="row.id">
-                    <td>{{ row.location.name }}</td>
-                    <td>{{ row.item.category_id }}</td>
-                    <td>{{ row.price }}</td>
-                    <td>{{ row.location_id }}</td>
-                    <td>{{ row.category_id }}</td>
-                </tr> -->
+                <tr v-for="row in Items" :key="row.id">
+                    <td>{{ row.location_name }}</td>
+                    <td>{{ row.category_name}}</td>
+                    <td>{{ row.parent_name }}</td>
+                    <td>{{ row.count }}</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -54,7 +53,7 @@ export default {
             })
                 .then(response => {
                     console.log(response.data);
-                    // this.Items = response.data;
+                    this.Items = response.data;
                 }).catch(console.error);
         }
     }

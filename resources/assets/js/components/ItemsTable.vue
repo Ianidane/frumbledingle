@@ -48,8 +48,8 @@
                     <td>{{ row.id }}</td>
                     <td>{{ row.name }}</td>
                     <td>{{ row.price }}</td>
-                    <td>{{ row.location_id }}</td>
-                    <td>{{ row.category_id }}</td>
+                    <td>{{ row.location.name }}</td>
+                    <td>{{ row.category.name }}</td>
                     <td align="center"><button class="btn btn-danger btn-sm" @click.prevent="deleteItem(row.id)"><i class="fa fa-times" /> Delete</button></td>
                 </tr>
             </tbody>
@@ -81,6 +81,7 @@ export default {
         getItems() {
             return axios.get('/api/items')
                 .then(response => {
+                    console.log(response.data)
                     this.Items = response.data;
                 }).catch(console.error);
         },

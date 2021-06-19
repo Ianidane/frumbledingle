@@ -38,28 +38,4 @@ class Report extends Model
         return $report->get();
     }
 
-    // public function generateReport(int $price)
-    // {
-    //     $report = DB::table('items as item');
-    //     $report->selectRaw('
-    //      location.name as locationName,
-    //      parent.name as parentName,
-    //      category.name as categoryName,
-    //      count(location.id) as count')
-    //         ->join('locations as location',
-    //         'item.location_id',
-    //         '=',
-    //         'location.id')
-    //         ->join('categories as category',
-    //         'item.category_id',
-    //         '=',
-    //         'category.id')
-    //         ->leftjoin('categories as parent',
-    //         'category.parent_id',
-    //         '=',
-    //         'parent.id')
-    //         ->groupBy(DB::raw('locationName, parentName, categoryName'))->where('item.price', '>=', $price);
-
-    //     return $report->get();
-    // }
 }

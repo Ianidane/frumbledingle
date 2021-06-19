@@ -10,7 +10,7 @@ class ItemController extends Controller
 {
     public function index()
     {
-        return response()->json(Item::get());
+        return response()->json(Item::with('location','category')->get());
     }
 
     public function store(Request $request)

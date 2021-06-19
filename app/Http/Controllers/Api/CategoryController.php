@@ -10,13 +10,14 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return response()->json(Category::get());
+        return response()->json(Category::with('parent')->get());
     }
 
     public function store(Request $request)
     {
         Category::create([
-            'name' => $request->input('name')
+            'name' => $request->input('name'),
+            'parent_id' => $request->input('parent')
         ]);
     }
 
