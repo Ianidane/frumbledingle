@@ -7,7 +7,8 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class RootTest extends TestCase
+
+class testRoot extends TestCase
 {
     /**
      * A basic test example.

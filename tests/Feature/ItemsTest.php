@@ -1,7 +1,7 @@
 <?php
 
 namespace Tests\Feature;
-use App\Models\Location;
+use App\Models\Item;
 
 
 use Tests\TestCase;
@@ -10,7 +10,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 
-class testLocation extends TestCase
+class testItem extends TestCase
 {
     /**
      * A basic test example.
@@ -19,7 +19,7 @@ class testLocation extends TestCase
      */
     public function testLoad()
     {
-        $response = $this->get('/locations');
+        $response = $this->get('/items');
 
         $response->assertStatus(200);
     }
@@ -27,7 +27,7 @@ class testLocation extends TestCase
     public function testData()
     {
 
-        $response = $this->postJson('api/locations', ['name' => str_random(10)]);
+        $response = $this->postJson('api/items', ['name' => str_random(10), 'price' => rand(1,20).'.'.rand(1,99), 'location_id' => rand(1,20), 'category_id' => rand(1,20)]);
 
         $response->assertStatus(200);
 

@@ -68,6 +68,7 @@ export default {
                 })
                 .then(this.getCategories)
                 .then(() => this.newCategoryName = '')
+                .then(() => this.newCategoryParent = '')
                 .catch(console.error);
         },
         deleteCategory(id) {

@@ -69,7 +69,8 @@ export default {
             Locations: [],
             newItemName: '',
             newItemPrice: '',
-            newItemLocation: ''
+            newItemLocation: '',
+            newItemCategory: ''
         };
     },
     mounted() {
