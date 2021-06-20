@@ -17,7 +17,7 @@ class testReport extends TestCase
      *
      * @return void
      */
-    public function testLoad()
+    public function test_report_page_load()
     {
         $response = $this->get('/report');
 

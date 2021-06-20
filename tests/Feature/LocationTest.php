@@ -17,14 +17,14 @@ class testLocation extends TestCase
      *
      * @return void
      */
-    public function testLoad()
+    public function test_location_page_load()
     {
         $response = $this->get('/locations');
 
         $response->assertStatus(200);
     }
 
-    public function testData()
+    public function test_location_api_save_data()
     {
 
         $response = $this->postJson('api/locations', ['name' => str_random(10)]);

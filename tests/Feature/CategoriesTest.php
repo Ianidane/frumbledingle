@@ -17,14 +17,14 @@ class testCategory extends TestCase
      *
      * @return void
      */
-    public function testLoad()
+    public function test_catagories_page_load()
     {
         $response = $this->get('/categories');
 
         $response->assertStatus(200);
     }
 
-    public function testData()
+    public function test_categories_api_save_data()
     {
 
         $response = $this->postJson('api/categories', ['name' => str_random(10), 'parent_id' => rand(1,20)]);

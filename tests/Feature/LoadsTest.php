@@ -15,7 +15,7 @@ class testRoot extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function test_home_page_load()
     {
         $response = $this->get('/');
 

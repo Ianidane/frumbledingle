@@ -17,14 +17,14 @@ class testItem extends TestCase
      *
      * @return void
      */
-    public function testLoad()
+    public function items()
     {
         $response = $this->get('/items');
 
         $response->assertStatus(200);
     }
 
-    public function testData()
+    public function test_items_api_save_data()
     {
 
         $response = $this->postJson('api/items', ['name' => str_random(10), 'price' => rand(1,20).'.'.rand(1,99), 'location_id' => rand(1,20), 'category_id' => rand(1,20)]);
