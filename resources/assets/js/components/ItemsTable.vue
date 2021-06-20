@@ -82,7 +82,7 @@ export default {
         getItems() {
             return axios.get('/api/items')
                 .then(response => {
-                    console.log(response.data)
+                    // console.log(response.data)
                     this.Items = response.data;
                 }).catch(console.error);
         },

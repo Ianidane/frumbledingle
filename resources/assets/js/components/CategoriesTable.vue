@@ -57,7 +57,7 @@ export default {
         getCategories() {
             return axios.get('/api/categories')
                 .then(response => {
-                    console.log(response.data);
+                    // console.log(response.data);
                     this.Categories = response.data;
                 }).catch(console.error);
         },

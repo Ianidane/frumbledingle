@@ -21,7 +21,7 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function destroy(Category $item)
+    public function destroy(Category $category)
     {
         $category->delete();
     }
